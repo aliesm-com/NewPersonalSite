@@ -1,0 +1,31 @@
+{
+  "name": "ali-esmaeili-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4173",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4173",
+    "check": "astro check",
+    "audit:build": "node scripts/audit-build.mjs",
+    "assets:optimize": "node scripts/optimize-assets.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.6",
+    "@astrojs/react": "^7.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "oxc-transform-react": "^0.145.0",
+    "@fontsource/cormorant-garamond": "^5.2.8",
+    "@fontsource/manrope": "^5.2.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.3",
+    "sharp": "^0.34.5"
+  }
+}

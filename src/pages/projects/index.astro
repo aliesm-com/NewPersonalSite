@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Scene from '../../components/Scene.astro';
+import ProjectExplorer from '../../components/ProjectExplorer';
+import { getCollection } from 'astro:content';
+const projects = (await getCollection('projects')).sort((a,b) => a.data.order-b.data.order).map(p => ({ id:p.id, ...p.data }));
+---
+<Layout title="Projects"><div class="page-scene"><Scene priority variant="muted-scene" /></div><section class="wrap page-content"><div class="page-heading"><p class="eyebrow">Projects / 01</p><h1>Selected work.</h1><p class="lead">Backend systems, AI products, and<br class="desktop-only" /> the infrastructure behind them.</p></div><ProjectExplorer projects={projects} client:idle /></section></Layout>

@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-10-07T13:38:47.526Z",
+  "htmlPages": 13,
+  "errors": [],
+  "totalPublicAssetBytes": 922654,
+  "largestImage": {
+    "path": "images/study-interior-1600.webp",
+    "bytes": 73404
+  },
+  "javascriptGzipBytes": 75297,
+  "assets": [
+    {
+      "path": "_astro/ClientRouter.astro_astro_type_script_index_0_lang.BM7fvbHr.js",
+      "bytes": 13866,
+      "gzipBytes": 4721
+    },
+    {
+      "path": "_astro/ContactForm.CWIcBYm4.js",
+      "bytes": 1638,
+      "gzipBytes": 803
+    },
+    {
+      "path": "_astro/Layout.Dl59DheI.css",
+      "bytes": 25544,
+      "gzipBytes": 6073
+    },
+    {
+      "path": "_astro/ProjectExplorer.CM0BWmko.js",
+      "bytes": 1469,
+      "gzipBytes": 684
+    },
+    {
+      "path": "_astro/client.CLhIxG29.js",
+      "bytes": 212922,
+      "gzipBytes": 65801
+    },
+    {
+      "path": "_astro/cormorant-garamond-latin-400-italic.Dc_OZ8oc.woff2",
+      "bytes": 23660
+    },
+    {
+      "path": "_astro/cormorant-garamond-latin-400-normal.B-1hWBU7.woff2",
+      "bytes": 22876
+    },
+    {
+      "path": "_astro/cormorant-garamond-latin-500-normal.BsRWmXhO.woff2",
+      "bytes": 23312
+    },
+    {
+      "path": "_astro/jsx-runtime.B4D0QtK9.js",
+      "bytes": 380,
+      "gzipBytes": 280
+    },
+    {
+      "path": "_astro/manrope-latin-400-normal.PaqtzbVb.woff2",
+      "bytes": 14108
+    },
+    {
+      "path": "_astro/manrope-latin-500-normal.BYYD-dBL.woff2",
+      "bytes": 14044
+    },
+    {
+      "path": "_astro/react.DJY1zw8Z.js",
+      "bytes": 7899,
+      "gzipBytes": 3008
+    },
+    {
+      "path": "images/hero-study-1024.avif",
+      "bytes": 20734
+    },
+    {
+      "path": "images/hero-study-1024.webp",
+      "bytes": 33562
+    },
+    {
+      "path": "images/hero-study-1600.avif",
+      "bytes": 33934
+    },
+    {
+      "path": "images/hero-study-1600.webp",
+      "bytes": 61070
+    },
+    {
+      "path": "images/hero-study-640.avif",
+      "bytes": 11601
+    },
+    {
+      "path": "images/hero-study-640.webp",
+      "bytes": 17568
+    },
+    {
+      "path": "images/podcast-studio-1024.avif",
+      "bytes": 19966
+    },
+    {
+      "path": "images/podcast-studio-1024.webp",
+      "bytes": 32882
+    },
+    {
+      "path": "images/podcast-studio-1600.avif",
+      "bytes": 32136
+    },
+    {
+      "path": "images/podcast-studio-1600.webp",
+      "bytes": 59178
+    },
+    {
+      "path": "images/podcast-studio-640.avif",
+      "bytes": 11523
+    },
+    {
+      "path": "images/podcast-studio-640.webp",
+      "bytes": 17444
+    },
+    {
+      "path": "images/study-interior-1024.avif",
+      "bytes": 24066
+    },
+    {
+      "path": "images/study-interior-1024.webp",
+      "bytes": 38422
+    },
+    {
+      "path": "images/study-interior-1600.avif",
+      "bytes": 42805
+    },
+    {
+      "path": "images/study-interior-1600.webp",
+      "bytes": 73404
+    },
+    {
+      "path": "images/study-interior-640.avif",
+      "bytes": 12175
+    },
+    {
+      "path": "images/study-interior-640.webp",
+      "bytes": 18466
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+---
+interface Props {
+  name?: string;
+  mobileName?: string;
+  priority?: boolean;
+  variant?: string;
+}
+const { name = 'study-interior', mobileName, priority = false, variant = '' } = Astro.props;
+const isHero = variant.includes('hero-scene');
+const desktopAvif = isHero
+  ? `/images/${name}-1280.avif 1280w, /images/${name}-1920.avif 1920w, /images/${name}-2560.avif 2560w`
+  : `/images/${name}-640.avif 640w, /images/${name}-1024.avif 1024w, /images/${name}-1600.avif 1600w`;
+const desktopWebp = isHero
+  ? `/images/${name}-1280.webp 1280w, /images/${name}-1920.webp 1920w, /images/${name}-2560.webp 2560w`
+  : `/images/${name}-640.webp 640w, /images/${name}-1024.webp 1024w, /images/${name}-1600.webp 1600w`;
+const mobileAvif = mobileName
+  ? `/images/${mobileName}-640.avif 640w, /images/${mobileName}-1080.avif 1080w, /images/${mobileName}-1440.avif 1440w`
+  : '';
+const mobileWebp = mobileName
+  ? `/images/${mobileName}-640.webp 640w, /images/${mobileName}-1080.webp 1080w, /images/${mobileName}-1440.webp 1440w`
+  : '';
+---
+<div class:list={['scene', variant]} aria-hidden="true">
+  <picture>
+    {mobileName && (
+      <>
+        <source
+          type="image/avif"
+          media="(max-width: 800px)"
+          srcset={mobileAvif}
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          media="(max-width: 800px)"
+          srcset={mobileWebp}
+          sizes="100vw"
+        />
+      </>
+    )}
+    <source type="image/avif" srcset={desktopAvif} sizes="100vw" />
+    <img
+      src={`/images/${name}-${isHero ? '1920' : '1024'}.webp`}
+      srcset={desktopWebp}
+      sizes="100vw"
+      width={isHero ? '2560' : '1600'}
+      height={isHero ? '1440' : '900'}
+      alt=""
+      loading={priority ? 'eager' : 'lazy'}
+      fetchpriority={priority ? 'high' : 'auto'}
+      decoding="async"
+    />
+  </picture>
+</div>

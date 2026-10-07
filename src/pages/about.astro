@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Scene from '../components/Scene.astro';
+import { site, skills } from '../data/site';
+---
+<Layout title="About">
+  <section class="inner-hero about-hero"><Scene name="study-interior" priority variant="about-scene" /><div class="wrap page-heading"><p class="eyebrow">About Ali</p><h1>The engineer<br />behind the systems.</h1><p class="lead">Senior Software Engineer</p><p class="intro">I build scalable backends, AI-powered products, and reliable developer platforms. My work connects software, infrastructure, and the people who use them.</p><div class="skills-list">{skills.map((skill, i) => <div><span class="skill-number">0{i+1}</span><div><h2>{skill.title}</h2><p>{skill.items}</p></div></div>)}</div><div class="actions"><a class="button" href={site.resume} download>Download CV</a><a class="text-link" href="/contact/">Let's talk</a></div></div></section>
+  <section class="section wrap about-details"><div><p class="eyebrow">How I work</p><h2>Thoughtful systems.<br />Practical delivery.</h2><p>I work across Python, Go, AI workflows, and DevOps, with a focus on production engineering. I enjoy tracing a problem through the whole system and turning complex requirements into reliable software.</p><p>I also mentor developers and share what I learn through software projects and podcasts.</p></div><div><p class="eyebrow">Education & community</p><div class="detail-row"><h3>Master’s · Artificial Intelligence</h3><p>Islamic Azad University, Qazvin<br />2022–2026</p></div><div class="detail-row"><h3>Bachelor’s · Computer Engineering</h3><p>Islamic Azad University, Karaj<br />2018–2022</p></div><div class="detail-row"><h3>Teaching & contributing</h3><p>Software Mentor & Git Instructor — Quera<br />Translator & Editor — WordPress Community</p></div><p class="muted">English · Professional working proficiency<br />Persian · Native</p></div></section>
+</Layout>

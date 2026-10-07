@@ -1,0 +1,98 @@
+[
+  {
+    "asset": "hero-portrait",
+    "width": 640,
+    "format": "avif",
+    "bytes": 28947,
+    "sourceBytes": 120860,
+    "savedPercent": 76
+  },
+  {
+    "asset": "hero-portrait",
+    "width": 640,
+    "format": "webp",
+    "bytes": 44570,
+    "sourceBytes": 120860,
+    "savedPercent": 63.1
+  },
+  {
+    "asset": "hero-portrait",
+    "width": 1024,
+    "format": "avif",
+    "bytes": 28947,
+    "sourceBytes": 120860,
+    "savedPercent": 76
+  },
+  {
+    "asset": "hero-portrait",
+    "width": 1024,
+    "format": "webp",
+    "bytes": 44570,
+    "sourceBytes": 120860,
+    "savedPercent": 63.1
+  },
+  {
+    "asset": "hero-portrait",
+    "width": 1600,
+    "format": "avif",
+    "bytes": 28947,
+    "sourceBytes": 120860,
+    "savedPercent": 76
+  },
+  {
+    "asset": "hero-portrait",
+    "width": 1600,
+    "format": "webp",
+    "bytes": 44570,
+    "sourceBytes": 120860,
+    "savedPercent": 63.1
+  },
+  {
+    "asset": "hero-study",
+    "width": 640,
+    "format": "avif",
+    "bytes": 14150,
+    "sourceBytes": 108066,
+    "savedPercent": 86.9
+  },
+  {
+    "asset": "hero-study",
+    "width": 640,
+    "format": "webp",
+    "bytes": 20298,
+    "sourceBytes": 108066,
+    "savedPercent": 81.2
+  },
+  {
+    "asset": "hero-study",
+    "width": 1024,
+    "format": "avif",
+    "bytes": 25850,
+    "sourceBytes": 108066,
+    "savedPercent": 76.1
+  },
+  {
+    "asset": "hero-study",
+    "width": 1024,
+    "format": "webp",
+    "bytes": 39068,
+    "sourceBytes": 108066,
+    "savedPercent": 63.8
+  },
+  {
+    "asset": "hero-study",
+    "width": 1600,
+    "format": "avif",
+    "bytes": 25850,
+    "sourceBytes": 108066,
+    "savedPercent": 76.1
+  },
+  {
+    "asset": "hero-study",
+    "width": 1600,
+    "format": "webp",
+    "bytes": 39068,
+    "sourceBytes": 108066,
+    "savedPercent": 63.8
+  }
+]

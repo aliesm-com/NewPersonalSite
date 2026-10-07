@@ -1,0 +1,50 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { site, navigation } from '../data/site';
+import '../styles/global.css';
+interface Props { title?: string; description?: string; }
+const { title, description = site.description } = Astro.props;
+const fullTitle = title ? `${title} — ${site.name}` : `${site.name} — Software, Systems & Stories`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const current = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070908" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <ClientRouter />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Ali Esmaeili home"><span class="monogram" aria-hidden="true">Æ</span><span>Ali Esmaeili</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav id="navigation" aria-label="Main navigation">
+        {navigation.map(item => <a href={item.href} aria-current={(item.href === '/' ? current === '/' : current.startsWith(item.href)) ? 'page' : undefined}>{item.label}</a>)}
+      </nav>
+    </header>
+    <main id="main" tabindex="-1"><slot /></main>
+    <footer class="site-footer"><a href="/contact/">A conversation starts here.</a><span>Software <i>×</i> Systems <i>×</i> People</span><span class="copyright">© {new Date().getFullYear()} Ali Esmaeili</span></footer>
+    <script>
+      const setupMenu = () => {
+        const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+        const close = () => { button?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); };
+        button?.addEventListener('click', () => { const open = button.getAttribute('aria-expanded') !== 'true'; button.setAttribute('aria-expanded', String(open)); document.body.classList.toggle('menu-open', open); });
+        document.querySelectorAll('#navigation a').forEach(a => a.addEventListener('click', close));
+        document.addEventListener('keydown', event => { if (event.key === 'Escape' && button?.getAttribute('aria-expanded') === 'true') { close(); button.focus(); } }, { signal: controller.signal });
+      };
+      let controller = new AbortController();
+      document.addEventListener('astro:page-load', () => { controller.abort(); controller = new AbortController(); document.body.classList.remove('menu-open'); setupMenu(); });
+    </script>
+  </body>
+</html>
